@@ -10,5 +10,6 @@ services:
     volumes:
       - ./appdata/config:/config
     ports:
-      - 4587:6501
+      - 6501:6501
+      - 4587:4587
     restart: unless-stopped
