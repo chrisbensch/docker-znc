@@ -1,0 +1,14 @@
+---
+services:
+  znc:
+    image: lscr.io/linuxserver/znc:latest
+    container_name: docker-znc
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - ./appdata/config:/config
+    ports:
+      - 4587:6501
+    restart: unless-stopped
